@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Homepage</title>
+	<meta name="Author" content="Anders Söderberg">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="Not changed yet">
+	<meta name="keywords" content="frontend, programmer, UI/UX, css">
+	<!-- <meta name="color-scheme" content="light dark"> -->
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff;">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" href="#">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.0/dist/chart.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-crosshair@1"></script>
+
+	<script src="index.js"></script>
+</head>
+
+<body>
+	<button id="start">start</button>
+	<button id="stop">stop</button>
+	<!-- <div id="display"></div> -->
+
+
+	<canvas id="chart" width="3" height="1"></canvas>
+
+
+	<style>
+		#display {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			display: grid;
+			place-items: center;
+			width: fit-content;
+			height: 100px;
+			transform: translate(-50%, -50%);
+		}
+	</style>
+
+</body>
+
+</html>
