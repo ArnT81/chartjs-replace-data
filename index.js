@@ -1,15 +1,17 @@
 $(() => {
+	//	VARIABLES
 	let everyOtherSecond;
 	const s = new Date().getSeconds();
 	const time = [s, s + 1, s + 2, s + 3];
 	const ctx = document.getElementById('chart');
 	let refridgerantReturn = [1, 2, 6, 9], refridgerant = [12, 19, 3, 5], ambient = [20, 15, 18, 20]
 
-
 	function replaceData(chart, label, newData) {
+		//	X-AXIS LABEL
 		chart.data.labels.shift();
 		chart.data.labels.push(label);
 
+		//	REPLACING DATAPOINTS
 		chart.data.datasets.forEach((dataset) => {
 			let filteredDataPoint = newData.filter((dp) => Object.keys(dp) == dataset.label)[0];
 			dataset.data.shift();
@@ -18,7 +20,7 @@ $(() => {
 		chart.update();
 	}
 
-
+	//	CHARTJS CHART
 	let myChart = new Chart(ctx, {
 		type: 'line',
 		data: {
@@ -57,7 +59,7 @@ $(() => {
 		}
 	});
 
-
+	//	EVENTLISTENERS
 	$('#start').on('click', () => {
 		everyOtherSecond = setInterval(() => {
 			refridgerant.push(1)
